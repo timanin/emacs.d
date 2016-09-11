@@ -32,4 +32,9 @@
 
 (use-package lice)
 
+(use-package magit
+  :config
+  (setq vc-handled-backends (delq 'Git vc-handled-backends))
+  :bind ("C-x g" . magit-status))
+
 ;;; packages.el ends here
