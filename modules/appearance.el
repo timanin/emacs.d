@@ -20,8 +20,6 @@
 ;;; Code:
 
 ;; Set colour theme
-;(use-package color-theme
-;  :config (require 'color-theme))
 (use-package base16-theme
   :config (load-theme 'base16-tomorrow-night t))
 
