@@ -64,5 +64,6 @@
 (require 'editing)
 (require 'git)
 (require 'support)
+(require 'syntax-check)
 
 ;;; init.el ends here
