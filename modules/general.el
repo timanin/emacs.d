@@ -46,6 +46,7 @@
 
 ;; Automatically revert a buffer, if the file has changed on disk
 (global-auto-revert-mode 1)
+(diminish 'auto-revert-mode)
 
 ;; Ignore case when completing file names
 (setq read-file-name-completion-ignore-case 't)

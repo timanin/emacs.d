@@ -44,6 +44,7 @@
 (require 'windows)
 (require 'editing)
 (require 'git)
+(require 'support)
 
 ;;; init.el ends here
 

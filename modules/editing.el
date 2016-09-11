@@ -46,6 +46,10 @@
 ;; Always newline at end of file
 (setq require-final-newline 't)
 
+;; Navigate CamelCase words as if they were separate words
+(global-subword-mode 1)
+(diminish 'subword-mode)
+
 (provide 'editing)
 
 ;;; editing.el ends here
