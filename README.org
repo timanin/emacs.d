@@ -6,7 +6,7 @@ This is my .emacs.d directory, settings are mostly stolen from all over the inte
 
 While I'm certain most things will work on any modern Emacs, personally I am currently using GNU Emacs 24.5.1 on macOS, and, therefore, can only guarantee the configuration to work correctly on a comparable setup.
 
-On macOS you can install Emacs using =brew=:
+On macOS you can install Emacs using Homebrew:
 
 #+BEGIN_SRC shell
 brew install emacs --with-cocoa
@@ -20,7 +20,7 @@ To download this configuration as you new =~/.emacs.d=:
 git clone https://github.com/timanin/emacs.d.git ~/.emacs.d
 #+END_SRC
 
-You'll also need the [[https://github.com/tonsky/FiraCode][Fira Code]] font, so either get it from their github page or install via =brew=:
+You'll also need the [[https://github.com/tonsky/FiraCode][Fira Code]] font, so either get it from their github page or install using Homebrew:
 
 #+BEGIN_SRC shell
 brew tap caskroom/fonts
