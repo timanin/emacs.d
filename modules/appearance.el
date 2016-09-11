@@ -20,8 +20,10 @@
 ;;; Code:
 
 ;; Set colour theme
-(require 'color-theme)
-(load-theme 'base16-tomorrow-night t)
+;(use-package color-theme
+;  :config (require 'color-theme))
+(use-package base16-theme
+  :config (load-theme 'base16-tomorrow-night t))
 
 ;; Change frame size & position on start
 (setq default-frame-alist

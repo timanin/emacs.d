@@ -29,8 +29,10 @@
 ;; Load packages
 (load "~/.emacs.d/packages.el")
 
-(load "~/.emacs.d/appearance.el")
-(load "~/.emacs.d/windows.el")
+(add-to-list 'load-path "~/.emacs.d/modules")
+
+(require 'appearance)
+(require 'windows)
 
 ;;; init.el ends here
 

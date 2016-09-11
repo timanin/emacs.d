@@ -26,11 +26,9 @@
 
 (setq use-package-always-ensure t)
 
-(use-package color-theme)
-(use-package base16-theme)
 (use-package hlinum)
 
-(use-package lice)
+;(use-package lice)
 
 (use-package magit
   :config
