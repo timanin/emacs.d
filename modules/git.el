@@ -1,5 +1,5 @@
 ;;; -*- lexical-binding: t -*-
-;;; packages.el --- Packages to install
+;;; git.el --- Git settings.
 
 ;; Copyright (C) 2016  Sergey Timanin
 
@@ -19,20 +19,11 @@
 
 ;;; Code:
 
-;; Bootstrap use-package
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
-
-(setq use-package-always-ensure t)
-
-(use-package hlinum)
-
-;(use-package lice)
-
 (use-package magit
   :config
   (setq vc-handled-backends (delq 'Git vc-handled-backends))
   :bind ("C-x g" . magit-status))
 
-;;; packages.el ends here
+(provide 'git)
+
+;;; git.el ends here

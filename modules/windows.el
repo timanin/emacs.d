@@ -24,17 +24,16 @@
 (icomplete-mode t)                             ; Completion in mini-buffer
 (setq read-buffer-completion-ignore-case 't)   ; Ignore case when completing buffer names
 (setq uniquify-buffer-name-style 'forward)     ; Unique representation of the buffer names
-(persistent-scratch-setup-default)             ; Persistent *scratch*
+;(persistent-scratch-setup-default)             ; Persistent *scratch*
 
-;; Files and sessions
-; save backup (#file#) files in temp directory
-(setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
-(setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
-(setq auto-save-timeout 60)                    ; Autosave every minute
-(setq make-backup-files nil)                   ; Don't create backup files
-(setq read-file-name-completion-ignore-case 't); Ignore case when completing file names
+(setq ns-pop-up-frames nil)                    ; Do not open new frame for new file
+
+;; Scroll without moving cursor
+(setq scroll-preserve-screen-position t)
+
+;; Don't accelerate scrolling and scroll slower
+(setq mouse-wheel-progressive-speed nil)
+(setq mouse-wheel-scroll-amount '(0.02))
 
 ;; ace-window
 (use-package ace-window

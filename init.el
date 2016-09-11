@@ -26,13 +26,24 @@
              '("melpa" . "https://melpa.org/packages/"))
 (package-initialize)
 
-;; Load packages
-(load "~/.emacs.d/packages.el")
+;; Bootstrap use-package
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
+;; Ensure packages added with use-package are installed by default
+(setq use-package-always-ensure t)
+
+;; Add modules directory to the list of directories to search for
+;; files to load
 (add-to-list 'load-path "~/.emacs.d/modules")
 
+;; Load provided features
 (require 'appearance)
+(require 'general)
 (require 'windows)
+(require 'editing)
+(require 'git)
 
 ;;; init.el ends here
 
