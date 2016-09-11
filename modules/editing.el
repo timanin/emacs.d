@@ -44,7 +44,11 @@
 (setq next-line-add-newlines t)
 
 ;; Always newline at end of file
-(setq require-final-newline 't)
+(setq mode-require-final-newline nil)
+(setq require-final-newline nil)
+
+;; Auto-indent after pressing RET
+(define-key global-map (kbd "RET") 'newline-and-indent)
 
 ;; Navigate CamelCase words as if they were separate words
 (global-subword-mode 1)
@@ -53,3 +57,4 @@
 (provide 'editing)
 
 ;;; editing.el ends here
+

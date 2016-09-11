@@ -24,19 +24,38 @@
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
+
+;; Load packages and activate them
 (package-initialize)
 
-;; Bootstrap use-package
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
+;; Refresh the packages description
+(unless package-archive-contents (package-refresh-contents))
+
+;; Paradox is the new replacement for a default package manager, it
+;; has a more modern user interface and support for things like github
+;; stars
+(when (not (package-installed-p 'paradox))
+  (package-install 'paradox))
+
+;; Bootstrap use-package for managing packages
+(paradox-require 'use-package)
+(require 'use-package)
 
 ;; Ensure packages added with use-package are installed by default
 (setq use-package-always-ensure t)
 
+(paradox-require 'exec-path-from-shell)
+
+(when (memq window-system '(x mac ns))
+  (exec-path-from-shell-initialize))
+
 ;; Add modules directory to the list of directories to search for
 ;; files to load
 (add-to-list 'load-path "~/.emacs.d/modules")
+
+;; Start server if not running yet
+(load "server")
+(unless (server-running-p) (server-start))
 
 ;; Load provided features
 (require 'appearance)
@@ -47,4 +66,3 @@
 (require 'support)
 
 ;;; init.el ends here
-
