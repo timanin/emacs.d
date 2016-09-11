@@ -29,21 +29,8 @@
 ;; Load packages
 (load "~/.emacs.d/packages.el")
 
-;; Set colour theme
-(require 'color-theme)
-(load-theme 'base16-tomorrow-night t)
-
-;; Change frame size & position on start
-(setq default-frame-alist
-      '((width . 120) (height . 58)
-        (left . 650) (top . 25)))
-
-;; Define font face and size
-(add-to-list 'default-frame-alist '(font . "Fira Code-14"))
-(custom-set-faces
- '(buffer-menu-buffer ((t (:weight normal))))
- '(ido-first-match ((t (:weight normal)))))
-
+(load "~/.emacs.d/appearance.el")
+(load "~/.emacs.d/windows.el")
 
 ;;; init.el ends here
 
