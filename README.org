@@ -20,6 +20,14 @@ To download this configuration as you new =~/.emacs.d=:
 git clone https://github.com/timanin/emacs.d.git ~/.emacs.d
 #+END_SRC
 
+You'll also need the [[https://github.com/tonsky/FiraCode][Fira Code]] font, so either get it from their github page or install via =brew=:
+
+#+BEGIN_SRC shell
+brew tap caskroom/fonts
+brew cask info font-fira-code
+#+END_SRC
+
+
 * Usage
 
 List of features pending.
