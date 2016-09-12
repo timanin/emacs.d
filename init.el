@@ -65,5 +65,6 @@
 (require 'git)
 (require 'support)
 (require 'syntax-check)
+(require 'flex)
 
 ;;; init.el ends here
