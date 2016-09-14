@@ -1,5 +1,5 @@
 ;;; -*- lexical-binding: t -*-
-;;; syntax-check.el --- Syntax checking settings.
+;;; my-yaml.el --- Yaml settings.
 
 ;; Copyright (C) 2016  Sergey Timanin
 
@@ -19,14 +19,10 @@
 
 ;;; Code:
 
-(use-package flycheck
-  :init (global-flycheck-mode))
+(use-package yaml-mode
+  :config
+  (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode)))
 
-;; Bind M-n and M-p to navigate to the next/previous errors.
-(global-set-key (kbd "M-n") 'next-error)
-(global-set-key (kbd "M-p") 'previous-error)
+(provide 'my-yaml)
 
-(provide 'syntax-check)
-
-;;; syntax-check.el ends here
-
+;;; my-yaml.el ends here

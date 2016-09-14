@@ -1,5 +1,5 @@
 ;;; -*- lexical-binding: t -*-
-;;; windows.el --- Windows, frames & buffers settings.
+;;; my-windows.el --- Windows, frames & buffers settings.
 
 ;; Copyright (C) 2016  Sergey Timanin
 
@@ -24,7 +24,11 @@
 (icomplete-mode t)                             ; Completion in mini-buffer
 (setq read-buffer-completion-ignore-case 't)   ; Ignore case when completing buffer names
 (setq uniquify-buffer-name-style 'forward)     ; Unique representation of the buffer names
-;(persistent-scratch-setup-default)             ; Persistent *scratch*
+
+;; Persistent *scratch*
+(use-package persistent-scratch
+  :init
+  (persistent-scratch-setup-default))
 
 (setq ns-pop-up-frames nil)                    ; Do not open new frame for new file
 
@@ -41,6 +45,6 @@
   :init
   (global-set-key [remap other-window] 'ace-window))
 
-(provide 'windows)
+(provide 'my-windows)
 
-;;; windows.el ends here
+;;; my-windows.el ends here

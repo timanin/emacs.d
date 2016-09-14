@@ -1,5 +1,5 @@
 ;;; -*- lexical-binding: t -*-
-;;; completion.el --- Autocomplete settings.
+;;; my-support.el --- Support settings.
 
 ;; Copyright (C) 2016  Sergey Timanin
 
@@ -19,11 +19,23 @@
 
 ;;; Code:
 
-(use-package company
+;; Which-key helps discover keybindings available for the current
+;; buffer mode
+(use-package which-key
   :config
-  (global-company-mode))
+  (which-key-mode)
+  (which-key-setup-side-window-bottom)
+  (setq which-key-popup-type 'side-window)
+  (setq which-key-side-window-location 'bottom)
+  (setq which-key-side-window-max-height 0.33)
+  :bind ("C-h C-k" . which-key-show-top-level)
+  :diminish which-key-mode)
 
-(provide 'completion)
+;; Show small help in echo area
+(eldoc-mode 1)
 
-;;; completion.el ends here
+(diminish 'eldoc-mode)
 
+(provide 'my-support)
+
+;;; my-support.el ends here

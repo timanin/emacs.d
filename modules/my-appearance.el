@@ -1,5 +1,5 @@
 ;;; -*- lexical-binding: t -*-
-;;; appearance.el --- Appearance settings & customisations.
+;;; my-appearance.el --- Appearance settings & customisations.
 
 ;; Copyright (C) 2016  Sergey Timanin
 
@@ -33,6 +33,10 @@
 (custom-set-faces
  '(buffer-menu-buffer ((t (:weight normal))))
  '(ido-first-match ((t (:weight normal)))))
+
+;; Start in OS X native fullscreen
+;(add-hook 'window-setup-hook
+;	  'toggle-frame-fullscreen t)
 
 ;; Disable toolbar
 (tool-bar-mode -1)
@@ -84,7 +88,7 @@
 ;; Tidy modeline
 (use-package diminish)
 
-(provide 'appearance)
+(provide 'my-appearance)
 
-;;; appearance.el ends here
+;;; my-appearance.el ends here
 

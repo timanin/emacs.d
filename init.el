@@ -57,14 +57,29 @@
 (load "server")
 (unless (server-running-p) (server-start))
 
+;; Edit server
+(use-package edit-server
+  :init
+  (edit-server-start)
+  :config
+  (setq edit-server-new-frame nil))
+
 ;; Load provided features
-(require 'appearance)
-(require 'general)
-(require 'windows)
-(require 'editing)
-(require 'git)
-(require 'support)
-(require 'syntax-check)
-(require 'flex)
+(require 'my-ansible)
+(require 'my-appearance)
+(require 'my-completion)
+(require 'my-diff)
+(require 'my-editing)
+(require 'my-fish)
+(require 'my-flex)
+(require 'my-general)
+(require 'my-git)
+(require 'my-haskell)
+(require 'my-markdown)
+(require 'my-support)
+(require 'my-syntax-check)
+(require 'my-web)
+(require 'my-windows)
+(require 'my-yaml)
 
 ;;; init.el ends here

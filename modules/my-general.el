@@ -1,5 +1,5 @@
 ;;; -*- lexical-binding: t -*-
-;;; general.el --- General settings.
+;;; my-general.el --- General settings.
 
 ;; Copyright (C) 2016  Sergey Timanin
 
@@ -55,6 +55,20 @@
 ;(add-hook 'after-init-hook
 ;          #'global-flycheck-mode)              ; Enable syntax checking with Flycheck
 
-(provide 'general)
+;; Unbind 'Suspend Emacs' combinations
+(global-unset-key (kbd "C-x C-z"))
 
-;;; general.el ends here
+;; A better way to disable ‘C-x C-c’
+(defun dont-kill-emacs ()
+  (interactive)
+  (error (substitute-command-keys "To exit emacs: \\[kill-emacs]")))
+(global-set-key "\C-x\C-c" 'dont-kill-emacs)
+
+;; Mac-specific keys
+(setq mac-command-modifier 'super)             ; Set Command to Super
+(setq ns-function-modifier 'hyper)             ; Set Function to Hyper
+(setq ns-right-alternate-modifier (quote none)); Right Option not to be interpreted as Meta
+
+(provide 'my-general)
+
+;;; my-general.el ends here

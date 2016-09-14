@@ -1,5 +1,5 @@
 ;;; -*- lexical-binding: t -*-
-;;; flex.el --- Flex matching settings.
+;;; my-diff.el --- Ediff buffers settings.
 
 ;; Copyright (C) 2016  Sergey Timanin
 
@@ -19,29 +19,12 @@
 
 ;;; Code:
 
-;; Enable Ido
-;; see https://www.masteringemacs.org/article/introduction-to-ido-mode
-(ido-mode 1)
-(ido-everywhere 1)
+;; ediff: split horizontally
+(setq ediff-split-window-function 'split-window-horizontally)
 
-(setq ido-enable-flex-matching t
-      ido-create-new-buffer 'always)
+;; ediff: do not spawn a new frame
+(setq ediff-window-setup-function 'ediff-setup-windows-plain)
 
-;; Enable it everywhere
-(use-package ido-ubiquitous
-  :config
-  (ido-ubiquitous-mode))
+(provide 'my-diff)
 
-(use-package smex
-  :config
-  (smex-initialize)
-  :bind (("M-x" . smex)
-         ("M-X" . smex-major-mode-commands)
-         ;; Old M-x
-         ("C-c C-c M-x" . execute-extended-command)))
-
-
-(provide 'flex)
-
-;;; flex.el ends here
-
+;;; my-diff.el ends here

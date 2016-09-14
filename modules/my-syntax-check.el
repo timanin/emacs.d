@@ -1,5 +1,5 @@
 ;;; -*- lexical-binding: t -*-
-;;; git.el --- Git settings.
+;;; my-syntax-check.el --- Syntax checking settings.
 
 ;; Copyright (C) 2016  Sergey Timanin
 
@@ -19,11 +19,14 @@
 
 ;;; Code:
 
-(use-package magit
-  :config
-  (setq vc-handled-backends (delq 'Git vc-handled-backends))
-  :bind ("C-x g" . magit-status))
+(use-package flycheck
+  :init (global-flycheck-mode))
 
-(provide 'git)
+;; Bind M-n and M-p to navigate to the next/previous errors.
+(global-set-key (kbd "M-n") 'next-error)
+(global-set-key (kbd "M-p") 'previous-error)
 
-;;; git.el ends here
+(provide 'my-syntax-check)
+
+;;; my-syntax-check.el ends here
+

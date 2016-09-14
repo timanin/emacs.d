@@ -1,5 +1,5 @@
 ;;; -*- lexical-binding: t -*-
-;;; support.el --- Support settings.
+;;; my-fish.el --- Fish mode settings.
 
 ;; Copyright (C) 2016  Sergey Timanin
 
@@ -19,18 +19,14 @@
 
 ;;; Code:
 
-;; Which-key helps discover keybindings available for the current
-;; buffer mode
-(use-package which-key
-  :config
-  (which-key-mode)
-  (which-key-setup-side-window-bottom)
-  (setq which-key-popup-type 'side-window)
-  (setq which-key-side-window-location 'bottom)
-  (setq which-key-side-window-max-height 0.33)
-  :bind ("C-h C-k" . which-key-show-top-level)
-  :diminish which-key-mode)
+(use-package fish-mode
+  :init
+  ;; run fish_indent before save:
+  (add-hook 'fish-mode-hook
+           (lambda ()
+             (add-hook 'before-save-hook 'fish_indent-before-save))))
 
-(provide 'support)
+(provide 'my-fish)
 
-;;; support.el ends here
+;;; my-fish.el ends here
+
