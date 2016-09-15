@@ -88,6 +88,19 @@
 ;; Tidy modeline
 (use-package diminish)
 
+(use-package "smart-mode-line"
+  :commands sml/setup
+  :demand t
+  :init
+  (setq sml/theme 'respectful)
+  ;; recommended defaults
+        sml/shorten-directory t
+        sml/shorten-modes t
+        sml/name-width 40
+        sml/mode-width 'full)
+  :config
+  (sml/setup))
+
 (provide 'my-appearance)
 
 ;;; my-appearance.el ends here

@@ -1,5 +1,5 @@
 ;;; -*- lexical-binding: t -*-
-;;; my-org.el --- Org settings.
+;;; my-elisp.el --- Elisp settings.
 
 ;; Copyright (C) 2016  Sergey Timanin
 
@@ -19,15 +19,18 @@
 
 ;;; Code:
 
-(use-package org
+;; Highlight the sexp under the cursor.
+;; doesn't work for some reason :(
+(use-package highlight-parentheses
+  :commands highlight-parentheses-mode
   :config
-  (use-package ox-reveal)
-  (use-package ox-ioslide)
-  (use-package org-bullets
-    :config
-    (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))))
+  (add-hook 'emacs-lisp-mode-hook 'highlight-parentheses-mode)
+  :diminish highlight-parentheses-mode)
 
-(provide 'my-org)
+;; Enable eldoc mode for elisp buffers
+(add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
 
-;;; my-org.el ends here
 
+(provide 'my-elisp)
+
+;;; my-elisp.el ends here

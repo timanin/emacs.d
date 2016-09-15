@@ -27,6 +27,7 @@
   (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
   (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
   ;; Path to the markdown binary
+  ;; check if needed
   (custom-set-variables '(markdown-command "/usr/local/bin/markdown")))
 
 (provide 'my-markdown)

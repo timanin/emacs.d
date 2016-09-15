@@ -1,5 +1,5 @@
 ;;; -*- lexical-binding: t -*-
-;;; my-org.el --- Org settings.
+;;; my-snippets.el --- Snippets settings & customisations.
 
 ;; Copyright (C) 2016  Sergey Timanin
 
@@ -19,15 +19,11 @@
 
 ;;; Code:
 
-(use-package org
+(use-package yasnippet
   :config
-  (use-package ox-reveal)
-  (use-package ox-ioslide)
-  (use-package org-bullets
-    :config
-    (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))))
+  (yas-global-mode 1))
 
-(provide 'my-org)
+(provide 'my-snippets)
 
-;;; my-org.el ends here
+;;; my-snippets.el ends here
 

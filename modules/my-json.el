@@ -1,5 +1,5 @@
 ;;; -*- lexical-binding: t -*-
-;;; my-org.el --- Org settings.
+;;; my-json.el --- Json settings.
 
 ;; Copyright (C) 2016  Sergey Timanin
 
@@ -19,15 +19,8 @@
 
 ;;; Code:
 
-(use-package org
-  :config
-  (use-package ox-reveal)
-  (use-package ox-ioslide)
-  (use-package org-bullets
-    :config
-    (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))))
+(use-package json-mode)
 
-(provide 'my-org)
+(provide 'my-json)
 
-;;; my-org.el ends here
-
+;;; my-json.el ends here
