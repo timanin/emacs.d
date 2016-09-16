@@ -21,7 +21,9 @@
 
 (use-package yasnippet
   :config
-  (yas-global-mode 1))
+  (yas-global-mode 1)
+  :diminish
+  (yas-minor-mode))
 
 (provide 'my-snippets)
 
