@@ -24,6 +24,17 @@
   (add-hook 'python-mode-hook
             (add-to-list 'company-backends '(company-jedi company-files))))
 
+(use-package anaconda-mode
+  :config
+  (add-hook 'python-mode-hook 'anaconda-mode)
+  (add-hook 'python-mode-hook 'anaconda-eldoc-mode))
+
+(use-package company-anaconda
+  :config
+  (eval-after-load "company"
+    '(add-to-list 'company-backends 'company-anaconda)))
+
+
 (provide 'my-python)
 
 ;;; my-python.el ends here
