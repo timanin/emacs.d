@@ -75,6 +75,7 @@
 (require 'my-flex)
 (require 'my-general)
 (require 'my-git)
+(require 'my-groovy)
 (require 'my-haskell)
 (require 'my-json)
 (require 'my-markdown)
