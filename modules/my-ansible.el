@@ -28,6 +28,10 @@
   ;; Enable company backend for completion
   (add-to-list 'company-backends 'company-ansible))
 
+(use-package ansible-doc
+  :init
+  (add-hook 'yaml-mode-hook #'ansible-doc-mode))
+
 (provide 'my-ansible)
 
 ;;; my-ansible.el ends here
