@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-python.el --- Python settings & customisations.
+;;; my-python.el --- Python settings & customisations -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

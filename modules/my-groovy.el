@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-groovy.el --- Groovy mode settings.
+;;; my-groovy.el --- Groovy mode settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 
