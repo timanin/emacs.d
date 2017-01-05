@@ -22,13 +22,11 @@
 ;; Associate file extensions with this mode
 ;; from: http://jblevins.org/projects/markdown-mode/
 (use-package markdown-mode
-  :config
-  (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
-  (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-  (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
-  ;; Path to the markdown binary
-  ;; check if needed
-  (custom-set-variables '(markdown-command "/usr/local/bin/markdown")))
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "markdown"))
 
 (provide 'my-markdown)
 
