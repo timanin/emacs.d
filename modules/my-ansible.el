@@ -24,7 +24,9 @@
   :init
   ;; Auto-enable for yaml files
   (add-hook 'yaml-mode-hook '(lambda () (ansible 1)))
+  :config
   ;; Enable company backend for completion
+  (add-hook 'ansible-hook 'company-mode)
   (add-to-list 'company-backends 'company-ansible))
 
 (provide 'my-ansible)
