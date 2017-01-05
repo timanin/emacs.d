@@ -49,3 +49,8 @@ ac-comphist.dat
 reveal.js
 
 var/
+
+# python related
+.python-environments/
+anaconda-mode/
+

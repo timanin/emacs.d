@@ -1,4 +1,5 @@
-;;; my-ansible.el --- Ansible mode settings -*- lexical-binding: t -*-
+;;; -*- lexical-binding: t -*-
+;;; my-python.el --- Python settings & customisations.
 
 ;; Copyright (C) 2016  Sergey Timanin
 
@@ -18,22 +19,23 @@
 
 ;;; Code:
 
-(require 'my-completion)
-
-(use-package ansible
+(use-package company-jedi
   :init
-  ;; Auto-enable for yaml files
-  (add-hook 'yaml-mode-hook '(lambda () (ansible 1)))
+  (add-hook 'python-mode-hook
+            (add-to-list 'company-backends '(company-jedi company-files))))
+
+(use-package anaconda-mode
   :config
-  ;; Enable company backend for completion
-  (add-hook 'ansible-hook 'company-mode)
-  (add-to-list 'company-backends 'company-ansible))
+  (add-hook 'python-mode-hook 'anaconda-mode)
+  (add-hook 'python-mode-hook 'anaconda-eldoc-mode))
 
-(use-package ansible-doc
-  :init
-  (add-hook 'yaml-mode-hook #'ansible-doc-mode))
+(use-package company-anaconda
+  :config
+  (eval-after-load "company"
+    '(add-to-list 'company-backends 'company-anaconda)))
 
-(provide 'my-ansible)
 
-;;; my-ansible.el ends here
+(provide 'my-python)
+
+;;; my-python.el ends here
 

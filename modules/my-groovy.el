@@ -1,4 +1,5 @@
-;;; my-ansible.el --- Ansible mode settings -*- lexical-binding: t -*-
+;;; -*- lexical-binding: t -*-
+;;; my-groovy.el --- Groovy mode settings.
 
 ;; Copyright (C) 2016  Sergey Timanin
 
@@ -18,22 +19,9 @@
 
 ;;; Code:
 
-(require 'my-completion)
+(use-package groovy-mode)
 
-(use-package ansible
-  :init
-  ;; Auto-enable for yaml files
-  (add-hook 'yaml-mode-hook '(lambda () (ansible 1)))
-  :config
-  ;; Enable company backend for completion
-  (add-hook 'ansible-hook 'company-mode)
-  (add-to-list 'company-backends 'company-ansible))
+(provide 'my-groovy)
 
-(use-package ansible-doc
-  :init
-  (add-hook 'yaml-mode-hook #'ansible-doc-mode))
-
-(provide 'my-ansible)
-
-;;; my-ansible.el ends here
+;;; my-groovy.el ends here
 
