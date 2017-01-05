@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-completion.el --- Autocomplete settings.
+;;; my-completion.el --- Autocomplete settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

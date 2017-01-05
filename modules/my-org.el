@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-org.el --- Org settings.
+;;; my-org.el --- Org settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

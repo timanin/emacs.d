@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-editing.el --- General editor settings.
+;;; my-editing.el --- General editor settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

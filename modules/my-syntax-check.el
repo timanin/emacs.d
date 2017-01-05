@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-syntax-check.el --- Syntax checking settings.
+;;; my-syntax-check.el --- Syntax checking settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-elisp.el --- Elisp settings.
+;;; my-elisp.el --- Elisp settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

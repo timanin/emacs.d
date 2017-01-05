@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-general.el --- General settings.
+;;; my-general.el --- General settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

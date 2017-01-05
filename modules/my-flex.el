@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-flex.el --- Flex matching settings.
+;;; my-flex.el --- Flex matching settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

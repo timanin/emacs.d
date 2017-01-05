@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-snippets.el --- Snippets settings & customisations.
+;;; my-snippets.el --- Snippets settings & customisations -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

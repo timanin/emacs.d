@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-markdown.el --- Markdown settings.
+;;; my-markdown.el --- Markdown settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

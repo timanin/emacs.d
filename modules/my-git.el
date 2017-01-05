@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-git.el --- Git settings.
+;;; my-git.el --- Git settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-support.el --- Support settings.
+;;; my-support.el --- Support settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

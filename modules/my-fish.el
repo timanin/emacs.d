@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-fish.el --- Fish mode settings.
+;;; my-fish.el --- Fish mode settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

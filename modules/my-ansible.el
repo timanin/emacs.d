@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-ansible.el --- Ansible mode settings.
+;;; my-ansible.el --- Ansible mode settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

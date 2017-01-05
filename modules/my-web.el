@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-web.el --- Web settings.
+;;; my-web.el --- Web settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

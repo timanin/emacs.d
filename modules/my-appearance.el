@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-appearance.el --- Appearance settings & customisations.
+;;; my-appearance.el --- Appearance settings & customisations -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

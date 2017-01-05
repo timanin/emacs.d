@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-diff.el --- Ediff buffers settings.
+;;; my-diff.el --- Ediff buffers settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

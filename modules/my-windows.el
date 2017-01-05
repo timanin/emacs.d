@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-windows.el --- Windows, frames & buffers settings.
+;;; my-windows.el --- Windows, frames & buffers settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

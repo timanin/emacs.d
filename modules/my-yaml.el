@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-yaml.el --- Yaml settings.
+;;; my-yaml.el --- Yaml settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

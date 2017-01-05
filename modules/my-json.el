@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-json.el --- Json settings.
+;;; my-json.el --- Json settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 

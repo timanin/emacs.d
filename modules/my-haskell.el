@@ -1,5 +1,4 @@
-;;; -*- lexical-binding: t -*-
-;;; my-haskell.el --- Haskell mode settings.
+;;; my-haskell.el --- Haskell mode settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 
