@@ -27,7 +27,7 @@
   ("README\\.md\\'" . gfm-mode)
   ("\\.md\\'" . markdown-mode)
   ("\\.markdown\\'" . markdown-mode)
-  :init
+  :config
   (setq markdown-command "markdown"))
 
 (provide 'my-markdown)

@@ -33,7 +33,6 @@
   (eval-after-load "company"
     '(add-to-list 'company-backends 'company-anaconda)))
 
-
 (provide 'my-python)
 
 ;;; my-python.el ends here

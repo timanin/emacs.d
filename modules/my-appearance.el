@@ -90,14 +90,13 @@
 (use-package diminish)
 
 (use-package smart-mode-line
-  :init
+  :config
   (setq sml/theme 'respectful)
   (setq sml/no-confirm-load-theme t)
   (setq sml/shorten-directory t)
   (setq sml/shorten-modes t)
   (setq sml/mode-width 'full)
   (setq sml/name-width 40)
-  :config
   (sml/setup))
 
 (provide 'my-appearance)

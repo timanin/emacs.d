@@ -19,7 +19,7 @@
 ;;; Code:
 
 (use-package flycheck
-  :init
+  :config
   (global-flycheck-mode))
 
 ;; Bind M-n and M-p to navigate to the next/previous errors.
