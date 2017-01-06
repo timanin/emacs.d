@@ -42,6 +42,7 @@
 
 ;; Ensure packages added with use-package are installed by default
 (setq use-package-always-ensure t)
+(setq use-package-verbose t)
 
 (paradox-require 'exec-path-from-shell)
 
@@ -52,14 +53,11 @@
 ;; files to load
 (add-to-list 'load-path "~/.emacs.d/modules")
 
-;; Start server if not running yet
-(load "server")
-(unless (server-running-p) (server-start))
-
-;; Edit server
+;; Start Emacs server & Edit server after init
 (use-package edit-server
   :init
-  (edit-server-start)
+  (add-hook 'after-init-hook 'server-start t)
+  (add-hook 'after-init-hook 'edit-server-start t)
   :config
   (setq edit-server-new-frame nil))
 

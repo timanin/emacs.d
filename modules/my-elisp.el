@@ -29,7 +29,6 @@
 ;; Enable eldoc mode for elisp buffers
 (add-hook 'emacs-lisp-mode-hook 'turn-on-eldoc-mode)
 
-
 (provide 'my-elisp)
 
 ;;; my-elisp.el ends here
