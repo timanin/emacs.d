@@ -27,7 +27,8 @@
   (setq which-key-popup-type 'side-window)
   (setq which-key-side-window-location 'bottom)
   (setq which-key-side-window-max-height 0.33)
-  :bind ("C-h C-k" . which-key-show-top-level)
+  :bind
+  ("C-h C-k" . which-key-show-top-level)
   :diminish which-key-mode)
 
 ;; Show small help in echo area

@@ -34,10 +34,11 @@
 (use-package smex
   :config
   (smex-initialize)
-  :bind (("M-x" . smex)
-         ("M-X" . smex-major-mode-commands)
-         ;; Old M-x
-         ("C-c C-c M-x" . execute-extended-command)))
+  :bind
+  ("M-x" . smex)
+  ("M-X" . smex-major-mode-commands)
+  ;; Old M-x
+  ("C-c C-c M-x" . execute-extended-command))
 
 
 (provide 'my-flex)

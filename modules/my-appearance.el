@@ -24,8 +24,10 @@
         (left . 650) (top . 25)))
 
 ;; Set colour theme
+;; More themes at https://belak.github.io/base16-emacs/
 (use-package base16-theme
-  :config (load-theme 'base16-tomorrow-night t))
+  :config
+  (load-theme 'base16-tomorrow-night t))
 
 ;; Define font face and size
 (add-to-list 'default-frame-alist '(font . "Fira Code-14"))
@@ -87,20 +89,17 @@
 ;; Tidy modeline
 (use-package diminish)
 
-(use-package "smart-mode-line"
-  :commands sml/setup
-  :demand t
+(use-package smart-mode-line
   :init
   (setq sml/theme 'respectful)
-  ;; recommended defaults
-        sml/shorten-directory t
-        sml/shorten-modes t
-        sml/name-width 40
-        sml/mode-width 'full)
+  (setq sml/no-confirm-load-theme t)
+  (setq sml/shorten-directory t)
+  (setq sml/shorten-modes t)
+  (setq sml/mode-width 'full)
+  (setq sml/name-width 40)
   :config
   (sml/setup))
 
 (provide 'my-appearance)
 
 ;;; my-appearance.el ends here
-

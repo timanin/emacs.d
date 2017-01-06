@@ -21,7 +21,8 @@
 ;; Enable for the matching filenames
 ;;
 (use-package web-mode
-  :mode ("\\.phtml\\'" "\\.djhtml\\'" "\\.html\\'")
+  :mode
+  ("\\.phtml\\'" "\\.djhtml\\'" "\\.html\\'")
   ;; Marks the -*- engine: jinja -*- variable as safe
   :init
   (add-hook 'web-mode-hook

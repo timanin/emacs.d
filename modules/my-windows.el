@@ -40,7 +40,6 @@
 
 ;; ace-window
 (use-package ace-window
-  :ensure t
   :init
   (global-set-key [remap other-window] 'ace-window))
 
