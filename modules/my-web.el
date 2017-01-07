@@ -30,7 +30,9 @@
               (setq safe-local-variable-values
                     '((engine . jinja)))))
   :config
-  (setq web-mode-enable-engine-detection t))
+  (setq web-mode-enable-engine-detection t)
+  (setq web-mode-enable-auto-closing t)
+  (setq web-mode-enable-auto-quoting t))
 
 (provide 'my-web)
 
