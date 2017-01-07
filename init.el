@@ -23,66 +23,56 @@
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
-
-;; Load packages and activate them
 (package-initialize)
 
-;; Refresh the packages description
-(unless package-archive-contents (package-refresh-contents))
+(unless (package-installed-p 'use-package)
+  (package-refresh-contents)
+  (package-install 'use-package))
 
-;; Paradox is the new replacement for a default package manager, it
-;; has a more modern user interface and support for things like github
-;; stars
-(when (not (package-installed-p 'paradox))
-  (package-install 'paradox))
-
-;; Bootstrap use-package for managing packages
-(paradox-require 'use-package)
-(require 'use-package)
+(eval-when-compile
+  (require 'use-package))
+(require 'diminish)
+(require 'bind-key)
 
 ;; Ensure packages added with use-package are installed by default
 (setq use-package-always-ensure t)
 (setq use-package-verbose t)
 
-(paradox-require 'exec-path-from-shell)
-
-(when (memq window-system '(x mac ns))
-  (exec-path-from-shell-initialize))
+(use-package exec-path-from-shell
+  :config
+  (when (memq window-system '(x mac ns))
+    (exec-path-from-shell-initialize)))
 
 ;; Add modules directory to the list of directories to search for
 ;; files to load
 (add-to-list 'load-path "~/.emacs.d/modules")
 
-;; Start Emacs server & Edit server after init
-(use-package edit-server
-  :init
-  (add-hook 'after-init-hook 'server-start t)
-  (add-hook 'after-init-hook 'edit-server-start t)
-  :config
-  (setq edit-server-new-frame nil))
-
 ;; Load provided features
-(require 'my-ansible)
 (require 'my-appearance)
 (require 'my-completion)
 (require 'my-diff)
 (require 'my-editing)
-(require 'my-elisp)
-(require 'my-fish)
 (require 'my-flex)
 (require 'my-general)
+(require 'my-server)
+(require 'my-support)
+(require 'my-windows)
+
 (require 'my-git)
-(require 'my-groovy)
-(require 'my-haskell)
+(require 'my-snippets)
+(require 'my-syntax-check)
+
 (require 'my-json)
 (require 'my-markdown)
 (require 'my-org)
-(require 'my-python)
-(require 'my-snippets)
-(require 'my-support)
-(require 'my-syntax-check)
-(require 'my-web)
-(require 'my-windows)
 (require 'my-yaml)
+
+(require 'my-ansible)
+(require 'my-elisp)
+(require 'my-fish)
+(require 'my-groovy)
+(require 'my-haskell)
+(require 'my-python)
+(require 'my-web)
 
 ;;; init.el ends here

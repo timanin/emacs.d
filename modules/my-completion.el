@@ -20,7 +20,8 @@
 
 (use-package company
   :config
-  (global-company-mode))
+  (global-company-mode)
+  :diminish "com")
 
 (provide 'my-completion)
 

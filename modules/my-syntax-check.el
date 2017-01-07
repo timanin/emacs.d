@@ -20,6 +20,7 @@
 
 (use-package flycheck
   :config
+  (setq flycheck-emacs-lisp-load-path 'inherit)
   (global-flycheck-mode))
 
 ;; Bind M-n and M-p to navigate to the next/previous errors.

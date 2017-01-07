@@ -1,4 +1,4 @@
-;;; my-elisp.el --- Elisp settings -*- lexical-binding: t -*-
+;;; my-server.el --- Server settings -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2016  Sergey Timanin
 
@@ -18,20 +18,14 @@
 
 ;;; Code:
 
-;; Highlight the sexp under the cursor.
-;; doesn't work for some reason :(
-(use-package highlight-parentheses
-  :commands highlight-parentheses-mode
+;; Start Emacs server & Edit server after init
+(use-package edit-server
+  :init
+  (add-hook 'after-init-hook 'server-start t)
+  (add-hook 'after-init-hook 'edit-server-start t)
   :config
-  (add-hook 'emacs-lisp-mode-hook 'highlight-parentheses-mode)
-  :diminish highlight-parentheses-mode)
+  (setq edit-server-new-frame nil))
 
-(defun setup-elisp-mode ()
-  "Enable eldoc & yasnippets modes for elisp buffers."
-  (eldoc-mode)
-  (yas-minor-mode))
-(add-hook 'emacs-lisp-mode-hook 'setup-elisp-mode)
+(provide 'my-server)
 
-(provide 'my-elisp)
-
-;;; my-elisp.el ends here
+;;; my-server.el ends here
