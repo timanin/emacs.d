@@ -58,7 +58,8 @@
 
 ;; Bind C-w to delete previous word
 (defun kill-region-or-backward-kill-word (&optional arg region)
-  "`kill-region' if the region is active, otherwise `backward-kill-word'"
+  "`kill-region' if the region is active, otherwise `backward-kill-word'.
+Don't remember what `ARG' or `REGION' is there for."
   (interactive
    (list (prefix-numeric-value current-prefix-arg) (use-region-p)))
   (if region
@@ -66,10 +67,9 @@
     (backward-kill-word arg)))
 (global-set-key (kbd "C-w") 'kill-region-or-backward-kill-word)
 
-;; Duplicate current line or region
 (defun duplicate-current-line-or-region (arg)
   "Duplicates the current line or region ARG times.
-If there's no region, the current line will be duplicated. However, if
+If there's no region, the current line will be duplicated.  However, if
 there's a region, all lines that region covers will be duplicated."
   (interactive "p")
   (let (beg end (origin (point)))
@@ -80,7 +80,7 @@ there's a region, all lines that region covers will be duplicated."
         (exchange-point-and-mark))
     (setq end (line-end-position))
     (let ((region (buffer-substring-no-properties beg end)))
-      (dotimes (i arg)
+      (dotimes (_ arg)
         (goto-char end)
         (newline)
         (insert region)
@@ -97,7 +97,7 @@ there's a region, all lines that region covers will be duplicated."
         (setq beg (region-beginning) end (region-end))
       (setq beg (line-beginning-position) end (line-end-position)))
     (comment-or-uncomment-region beg end)
-    (next-line)))
+    (forward-line)))
 (global-set-key (kbd "C-;") 'comment-or-uncomment-region-or-line)
 
 ;; Bind <f5> to recompile
