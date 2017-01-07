@@ -55,7 +55,7 @@
 (require 'my-flex)
 (require 'my-general)
 (require 'my-server)
-(require 'my-support)
+(require 'my-help)
 (require 'my-windows)
 
 (require 'my-git)

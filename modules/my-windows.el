@@ -43,8 +43,7 @@
   :bind "C-x C-o"
   :init
   (global-set-key [remap other-window] 'ace-window)
-  :diminish
-  (ace-window-mode))
+  :diminish ace-window-mode)
 
 (provide 'my-windows)
 
