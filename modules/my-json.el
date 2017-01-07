@@ -18,7 +18,8 @@
 
 ;;; Code:
 
-(use-package json-mode)
+(use-package json-mode
+  :defer t)
 
 (provide 'my-json)
 

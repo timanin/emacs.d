@@ -28,6 +28,7 @@
 
 ;; Enable it everywhere
 (use-package ido-ubiquitous
+  :defer 2
   :config
   (ido-ubiquitous-mode))
 

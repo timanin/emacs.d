@@ -18,7 +18,8 @@
 
 ;;; Code:
 
-(use-package groovy-mode)
+(use-package groovy-mode
+  :defer t)
 
 (provide 'my-groovy)
 

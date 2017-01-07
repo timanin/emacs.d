@@ -21,15 +21,18 @@
 (require 'my-completion)
 
 (use-package ansible
+  :defer t
   :init
   ;; Auto-enable for yaml files
   (add-hook 'yaml-mode-hook '(lambda () (ansible 1)))
   :config
-  ;; Enable company backend for completion
-  (add-hook 'ansible-hook 'company-mode)
-  (add-to-list 'company-backends 'company-ansible))
+  (use-package company-ansible
+    :config
+    (add-hook 'ansible-hook 'company-mode)
+    (add-to-list 'company-backends 'company-ansible)))
 
 (use-package ansible-doc
+  :defer t
   :init
   (add-hook 'yaml-mode-hook #'ansible-doc-mode))
 

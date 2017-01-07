@@ -19,6 +19,7 @@
 ;;; Code:
 
 (use-package fish-mode
+  :defer t
   :init
   ;; run fish_indent before save:
   (add-hook 'fish-mode-hook

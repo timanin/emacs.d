@@ -20,43 +20,50 @@
 
 ;; Based on: http://haskell.github.io/haskell-mode/manual/latest/Interactive-Haskell.html#Interactive-Haskell
 
-(use-package haskell-mode)
-(use-package ghc)
-(use-package hi2)
-(use-package intero)
-(use-package flycheck-haskell)
-(use-package company-ghc)
+(use-package haskell-mode
+  :defer t
+  :config
+  (add-hook 'haskell-mode-hook 'haskell-doc-mode)
+  :bind
+  (:map haskell-mode-map
+        ("C-c C-l" . haskell-process-load-file)
+        ("C-`" . haskell-interactive-bring)
+        ("C-c C-t" . haskell-process-do-type)
+        ("C-c C-i" . haskell-process-do-info)
+        ("C-c C-c" . haskell-process-cabal-build)
+        ("C-c C-k" . haskell-interactive-mode-clear)
+        ("C-c c" . haskell-process-cabal)
+        ("C-c C-." . haskell-indent-align-guards-and-rhs)
+   :map haskell-cabal-mode-map
+        ("C-`" . haskell-interactive-bring)
+        ("C-c C-k" . haskell-interactive-mode-clear)
+        ("C-c C-c" . haskell-process-cabal-build)
+        ("C-c c" . haskell-process-cabal)))
+(use-package ghc
+  :defer t)
+(use-package hi2
+  :defer t
+  :config
+  (add-hook 'haskell-mode-hook 'turn-on-hi2))
+(use-package intero
+  :defer t)
+(use-package flycheck-haskell
+  :defer t)
+(use-package company-ghc
+  :defer t
+  :config
+  (add-hook 'haskell-mode-hook 'company-mode)
+  (add-to-list 'company-backends 'company-ghc)
+  (custom-set-variables '(company-ghc-show-info t)))
 
 ;; Intero
 ;(add-hook 'haskell-mode-hook 'intero-mode)
-
-;; hi2
-(add-hook 'haskell-mode-hook 'turn-on-hi2)
-
-;; Turn on doc mode by default
-(add-hook 'haskell-mode-hook 'haskell-doc-mode)
 
 ;; Customizations
 (custom-set-variables
   '(haskell-process-suggest-remove-import-lines t)
   '(haskell-process-auto-import-loaded-modules t)
   '(haskell-process-log t))
-
-;; Haskell-mode keybindings
-(define-key haskell-mode-map (kbd "C-c C-l") 'haskell-process-load-file)
-(define-key haskell-mode-map (kbd "C-`") 'haskell-interactive-bring)
-(define-key haskell-mode-map (kbd "C-c C-t") 'haskell-process-do-type)
-(define-key haskell-mode-map (kbd "C-c C-i") 'haskell-process-do-info)
-(define-key haskell-mode-map (kbd "C-c C-c") 'haskell-process-cabal-build)
-(define-key haskell-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
-(define-key haskell-mode-map (kbd "C-c c") 'haskell-process-cabal)
-(define-key haskell-mode-map (kbd "C-c C-.") 'haskell-indent-align-guards-and-rhs)
-
-;; Cabal-mode keybindings
-(define-key haskell-cabal-mode-map (kbd "C-`") 'haskell-interactive-bring)
-(define-key haskell-cabal-mode-map (kbd "C-c C-k") 'haskell-interactive-mode-clear)
-(define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-process-cabal-build)
-(define-key haskell-cabal-mode-map (kbd "C-c c") 'haskell-process-cabal)
 
 ;; GHCi process type
 (custom-set-variables
@@ -92,11 +99,6 @@
 (autoload 'ghc-init "ghc" nil t)
 (autoload 'ghc-debug "ghc" nil t)
 (add-hook 'haskell-mode-hook (lambda () (ghc-init)))
-
-;; Company
-(add-hook 'haskell-mode-hook 'company-mode)
-(add-to-list 'company-backends 'company-ghc)
-(custom-set-variables '(company-ghc-show-info t))
 
 (provide 'my-haskell)
 

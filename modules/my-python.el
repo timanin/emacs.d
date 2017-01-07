@@ -18,17 +18,23 @@
 
 ;;; Code:
 
+(defun my-python-mode-hook ()
+  (add-to-list 'company-backends 'company-jedi))
+
 (use-package company-jedi
+  :defer t
   :init
-  (add-hook 'python-mode-hook
-            (add-to-list 'company-backends '(company-jedi company-files))))
+  (eval-after-load "company"
+    '(add-hook 'python-mode-hook 'my-python-mode-hook)))
 
 (use-package anaconda-mode
+  :defer t
   :config
   (add-hook 'python-mode-hook 'anaconda-mode)
   (add-hook 'python-mode-hook 'anaconda-eldoc-mode))
 
 (use-package company-anaconda
+  :defer t
   :config
   (eval-after-load "company"
     '(add-to-list 'company-backends 'company-anaconda)))
