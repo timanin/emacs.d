@@ -56,6 +56,17 @@
 ;; Bind C-h to DEL
 (define-key key-translation-map (kbd "C-h") (kbd "<DEL>"))
 
+;; hungry-delete mode
+(use-package hungry-delete
+  :defer 1
+  :config
+  (global-hungry-delete-mode))
+
+;; expand-region mode
+(use-package expand-region
+  :bind
+  ("C-=" . er/expand-region))
+
 ;; Bind C-w to delete previous word
 (defun kill-region-or-backward-kill-word (&optional arg region)
   "`kill-region' if the region is active, otherwise `backward-kill-word'.
