@@ -49,6 +49,9 @@
 ;; Auto-indent after pressing RET
 (define-key global-map (kbd "RET") 'newline-and-indent)
 
+;; Save OS clipboard contents in the kill ring
+(setq save-interprogram-paste-before-kill t)
+
 ;; Navigate CamelCase words as if they were separate words
 (global-subword-mode 1)
 (diminish 'subword-mode)
