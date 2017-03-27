@@ -72,6 +72,7 @@
 (require 'my-fish)
 (require 'my-groovy)
 (require 'my-haskell)
+(require 'my-hashicorp)
 (require 'my-python)
 (require 'my-web)
 
