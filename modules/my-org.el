@@ -19,8 +19,10 @@
 ;;; Code:
 
 (use-package org
+  :defer t
   :config
-  (use-package ox-reveal)
+  (use-package ox-reveal
+    :ensure t)
   (use-package ox-ioslide)
   (use-package org-bullets
     :config
@@ -29,4 +31,3 @@
 (provide 'my-org)
 
 ;;; my-org.el ends here
-
