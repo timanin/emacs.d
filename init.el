@@ -59,6 +59,7 @@
 (require 'my-windows)
 
 (require 'my-git)
+(require 'my-project)
 (require 'my-snippets)
 (require 'my-syntax-check)
 
