@@ -19,7 +19,7 @@
 ;;; Code:
 
 ;; Buffers and windows
-(global-set-key "\C-x\C-b" 'buffer-menu)       ; CxCb puts point on buffer list
+(global-set-key "\C-x\C-b" 'buffer-menu)       ; C-x C-b puts point on buffer list
 (icomplete-mode t)                             ; Completion in mini-buffer
 (setq read-buffer-completion-ignore-case 't)   ; Ignore case when completing buffer names
 (setq uniquify-buffer-name-style 'forward)     ; Unique representation of the buffer names
@@ -40,7 +40,7 @@
 
 ;; ace-window
 (use-package ace-window
-  :bind "C-x C-o"
+;;   :bind "C-x C-o"
   :init
   (global-set-key [remap other-window] 'ace-window)
   :diminish ace-window-mode)

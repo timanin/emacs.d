@@ -18,13 +18,17 @@
 
 ;;; Code:
 
-;; Enable Ido
-;; see https://www.masteringemacs.org/article/introduction-to-ido-mode
-(ido-mode 1)
-
-(setq ido-enable-flex-matching t
-      ido-everywhere t
-      ido-create-new-buffer 'always)
+;; Using flx-ido to replace default ido
+;; https://github.com/lewang/flx
+(use-package flx-ido
+  :config
+  (ido-mode 1)
+  (ido-everywhere 1)
+  (flx-ido-mode 1)
+  ;; disable ido faces to see flx highlights
+  (setq ido-enable-flex-matching t
+        ido-use-faces nil
+        gc-cons-threshold 20000000))
 
 ;; Enable it everywhere
 (use-package ido-ubiquitous
@@ -41,8 +45,6 @@
   ;; Old M-x
   ("C-c C-c M-x" . execute-extended-command))
 
-
 (provide 'my-flex)
 
 ;;; my-flex.el ends here
-
