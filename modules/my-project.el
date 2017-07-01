@@ -26,7 +26,6 @@
 
 ;; https://github.com/purcell/ibuffer-projectile
 (use-package ibuffer-projectile
-  :bind ("C-x C-b" . ibuffer)
   :config
   (add-hook 'ibuffer-hook
             (lambda ()

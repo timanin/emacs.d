@@ -19,7 +19,7 @@
 ;;; Code:
 
 ;; Buffers and windows
-(global-set-key "\C-x\C-b" 'buffer-menu)       ; C-x C-b puts point on buffer list
+(global-set-key (kbd "C-x C-b") 'ibuffer)      ; Use Ibuffer for buffer-list
 (icomplete-mode t)                             ; Completion in mini-buffer
 (setq read-buffer-completion-ignore-case 't)   ; Ignore case when completing buffer names
 (setq uniquify-buffer-name-style 'forward)     ; Unique representation of the buffer names
