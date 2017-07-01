@@ -19,7 +19,6 @@
 ;;; Code:
 
 ;; Buffers and windows
-(global-set-key (kbd "C-x C-b") 'ibuffer)      ; Use Ibuffer for buffer-list
 (icomplete-mode t)                             ; Completion in mini-buffer
 (setq read-buffer-completion-ignore-case 't)   ; Ignore case when completing buffer names
 (setq uniquify-buffer-name-style 'forward)     ; Unique representation of the buffer names
@@ -44,6 +43,30 @@
   :init
   (global-set-key [remap other-window] 'ace-window)
   :diminish ace-window-mode)
+
+;; ibuffer
+(global-set-key (kbd "C-x C-b") 'ibuffer)      ; Use Ibuffer for buffer-list
+(setq ibuffer-saved-filter-groups
+      (list
+       (cons "default"
+             (append
+              (ibuffer-projectile-generate-filter-groups) ; get groups from
+                                                          ; ibuffer-projectile
+              '(("emacs-config" (filename . ".emacs.d"))
+                ("org" (or
+                        (mode . org-mode)
+                        (filename . "^.*org$")))
+                ("shell" (or
+                          (mode . eshell-mode)
+                          (mode . (shell-mode))))
+                ("emacs" (or (name . "*scratch*")
+                             (name . "*Messages*"))))))))
+(add-hook 'ibuffer-mode-hook
+          (lambda ()
+	    (ibuffer-auto-mode 1)
+	    (ibuffer-switch-to-saved-filter-groups "default")))
+;; Don't show filter groups if there are no buffers in that group
+(setq ibuffer-show-empty-filter-groups nil)
 
 (provide 'my-windows)
 
