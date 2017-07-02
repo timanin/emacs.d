@@ -48,6 +48,8 @@
 
 ;; Auto-indent after pressing RET
 (define-key global-map (kbd "RET") 'newline-and-indent)
+;; Make return key also do indent, globally
+(electric-indent-mode 1)
 
 ;; Save OS clipboard contents in the kill ring
 (setq save-interprogram-paste-before-kill t)
