@@ -67,6 +67,8 @@
 	    (ibuffer-switch-to-saved-filter-groups "default")))
 ;; Don't show filter groups if there are no buffers in that group
 (setq ibuffer-show-empty-filter-groups nil)
+;; Don't ask for confirmation to delete marked buffers
+(setq ibuffer-expert t)
 
 (provide 'my-windows)
 
