@@ -28,7 +28,7 @@
   ("\\.md\\'" . markdown-mode)
   ("\\.markdown\\'" . markdown-mode)
   :config
-  (setq markdown-command "markdown"))
+  (setq markdown-command "multimarkdown"))
 
 (provide 'my-markdown)
 
