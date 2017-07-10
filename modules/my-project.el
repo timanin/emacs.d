@@ -24,14 +24,9 @@
   (projectile-global-mode)
   :diminish projectile-mode)
 
-;; https://github.com/purcell/ibuffer-projectile
-(use-package ibuffer-projectile
+(use-package persp-projectile
   :config
-  (add-hook 'ibuffer-mode-hook
-            (lambda ()
-              (ibuffer-projectile-set-filter-groups)
-              (unless (eq ibuffer-sorting-mode 'alphabetic)
-                (ibuffer-do-sort-by-alphabetic)))))
+  (persp-mode))
 
 (provide 'my-project)
 

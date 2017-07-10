@@ -45,30 +45,39 @@
   :diminish ace-window-mode)
 
 ;; ibuffer
-(global-set-key (kbd "C-x C-b") 'ibuffer)      ; Use Ibuffer for buffer-list
-(setq ibuffer-saved-filter-groups
-      (list
-       (cons "default"
-             (append
-              (ibuffer-projectile-generate-filter-groups) ; get groups from
-                                                          ; ibuffer-projectile
-              '(("emacs-config" (filename . ".emacs.d"))
-                ("org" (or
-                        (mode . org-mode)
-                        (filename . "^.*org$")))
-                ("shell" (or
-                          (mode . eshell-mode)
-                          (mode . (shell-mode))))
-                ("emacs" (or (name . "*scratch*")
-                             (name . "*Messages*"))))))))
-(add-hook 'ibuffer-mode-hook
-          (lambda ()
-	    (ibuffer-auto-mode 1)
-	    (ibuffer-switch-to-saved-filter-groups "default")))
-;; Don't show filter groups if there are no buffers in that group
-(setq ibuffer-show-empty-filter-groups nil)
-;; Don't ask for confirmation to delete marked buffers
-(setq ibuffer-expert t)
+;; https://github.com/purcell/ibuffer-projectile
+(use-package ibuffer-projectile
+  :after projectile
+  :config
+  (add-hook 'ibuffer-mode-hook
+            (lambda ()
+              (ibuffer-projectile-set-filter-groups)
+              (unless (eq ibuffer-sorting-mode 'alphabetic)
+                (ibuffer-do-sort-by-alphabetic))))
+  (global-set-key (kbd "C-x C-b") 'ibuffer)      ; Use Ibuffer for buffer-list
+  (setq ibuffer-saved-filter-groups
+        (list
+         (cons "default"
+               (append
+                (ibuffer-projectile-generate-filter-groups) ; get groups from
+                                        ; ibuffer-projectile
+                '(("emacs-config" (filename . ".emacs.d"))
+                  ("org" (or
+                          (mode . org-mode)
+                          (filename . "^.*org$")))
+                  ("shell" (or
+                            (mode . eshell-mode)
+                            (mode . (shell-mode))))
+                  ("emacs" (or (name . "*scratch*")
+                               (name . "*Messages*"))))))))
+  (add-hook 'ibuffer-mode-hook
+            (lambda ()
+              (ibuffer-auto-mode 1)
+              (ibuffer-switch-to-saved-filter-groups "default")))
+  ;; Don't show filter groups if there are no buffers in that group
+  (setq ibuffer-show-empty-filter-groups nil)
+  ;; Don't ask for confirmation to delete marked buffers
+  (setq ibuffer-expert t))
 
 (provide 'my-windows)
 
