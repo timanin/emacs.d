@@ -39,6 +39,8 @@
   (eval-after-load "company"
     '(add-to-list 'company-backends 'company-anaconda)))
 
+(use-package pyvenv)
+
 (provide 'my-python)
 
 ;;; my-python.el ends here
