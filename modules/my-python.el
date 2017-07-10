@@ -18,15 +18,6 @@
 
 ;;; Code:
 
-(defun my-python-mode-hook ()
-  (add-to-list 'company-backends 'company-jedi))
-
-(use-package company-jedi
-  :defer t
-  :init
-  (eval-after-load "company"
-    '(add-hook 'python-mode-hook 'my-python-mode-hook)))
-
 (use-package anaconda-mode
   :defer t
   :config
@@ -35,11 +26,12 @@
 
 (use-package company-anaconda
   :defer t
+  :after company
   :config
-  (eval-after-load "company"
-    '(add-to-list 'company-backends 'company-anaconda)))
+  (push 'company-anaconda company-backends))
 
-(use-package pyvenv)
+(use-package pyvenv
+  :defer t)
 
 (provide 'my-python)
 
