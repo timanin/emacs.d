@@ -20,9 +20,8 @@
 
 (use-package flycheck
   :defer t
-  :config
-  (setq flycheck-emacs-lisp-load-path 'inherit)
-  (global-flycheck-mode))
+  :init
+  (add-hook 'after-init-hook #'global-flycheck-mode))
 
 ;; Bind M-n and M-p to navigate to the next/previous errors.
 (global-set-key (kbd "M-n") 'next-error)
