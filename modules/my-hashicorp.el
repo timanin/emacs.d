@@ -22,13 +22,13 @@
   :defer t
   :config
   (custom-set-variables
-   '(hcl-indent-level 4)))
+   '(hcl-indent-level 2)))
 
 (use-package terraform-mode
   :mode "\\.tf\\'"
   :config
   (custom-set-variables
-   '(terraform-indent-level 4)))
+   '(terraform-indent-level 2)))
 
 (provide 'my-hashicorp)
 
