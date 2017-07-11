@@ -27,7 +27,7 @@
 ;; More themes at https://belak.github.io/base16-emacs/
 (use-package base16-theme
   :config
-  (load-theme 'base16-tomorrow-night t))
+  (load-theme 'base16-eighties t))
 
 ;; Define font face and size
 (add-to-list 'default-frame-alist '(font . "Fira Code-14"))
