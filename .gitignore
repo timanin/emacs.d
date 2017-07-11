@@ -54,3 +54,5 @@ var/
 .python-environments/
 anaconda-mode/
 
+# projectile
+projectile-bookmarks.eld
