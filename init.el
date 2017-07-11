@@ -47,6 +47,10 @@
 ;; files to load
 (add-to-list 'load-path "~/.emacs.d/modules")
 
+;; Effectively disable the custom facility
+;; http://irreal.org/blog/?p=3765
+(setq custom-file (make-temp-file "emacs-custom"))
+
 ;; Load provided features
 (require 'my-appearance)
 (require 'my-completion)
@@ -78,3 +82,4 @@
 (require 'my-web)
 
 ;;; init.el ends here
+
