@@ -31,7 +31,7 @@
         gc-cons-threshold 20000000))
 
 ;; Enable it everywhere
-(use-package ido-ubiquitous
+(use-package ido-completing-read+
   :defer 2
   :config
   (ido-ubiquitous-mode))
