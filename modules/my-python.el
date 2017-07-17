@@ -31,7 +31,8 @@
   (push 'company-anaconda company-backends))
 
 (use-package pyvenv
-  :defer t)
+  :defer t
+  :after anaconda-mode)
 
 (provide 'my-python)
 
