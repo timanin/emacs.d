@@ -32,7 +32,9 @@
   :config
   (setq web-mode-enable-engine-detection t)
   (setq web-mode-enable-auto-closing t)
-  (setq web-mode-enable-auto-quoting t))
+  (setq web-mode-enable-auto-quoting t)
+  (setq web-mode-content-types-alist
+      '(("jsx" . "\\.js[x]?\\'"))))
 
 (provide 'my-web)
 
