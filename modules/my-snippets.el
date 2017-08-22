@@ -25,6 +25,9 @@
   :diminish
   (yas-minor-mode))
 
+(use-package yasnippet-snippets
+  :after yasnippet)
+
 (provide 'my-snippets)
 
 ;;; my-snippets.el ends here
