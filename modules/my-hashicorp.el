@@ -30,6 +30,12 @@
   (custom-set-variables
    '(terraform-indent-level 2)))
 
+(use-package company-terraform
+  :defer t
+  :after terraform-mode
+  :config
+  (company-terraform-init))
+
 (provide 'my-hashicorp)
 
 ;;; my-hashicorp.el ends here
