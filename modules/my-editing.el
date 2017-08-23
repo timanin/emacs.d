@@ -125,6 +125,9 @@ there's a region, all lines that region covers will be duplicated."
 ;; Bind C-x a r to align-regexp
 (global-set-key (kbd "C-x a r") 'align-regexp)
 
+;; Disable the warning when using buffer narrowing
+(put 'narrow-to-region 'disabled nil)
+
 (provide 'my-editing)
 
 ;;; my-editing.el ends here
