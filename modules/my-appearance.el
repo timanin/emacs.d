@@ -102,6 +102,21 @@
   (setq sml/name-width 40)
   (sml/setup))
 
+;; Before the first use run:
+;; M-x all-the-icons-install-fonts
+(use-package all-the-icons)
+
+(use-package all-the-icons-dired
+  :after all-the-icons
+  :config
+  (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
+  ;; Face
+  (defface all-the-icons-dired-dir-face
+    '((((background dark)) :foreground "gray50")
+      (((background light)) :foreground "black"))
+    "Face for the directory icon"
+    :group 'all-the-icons-faces))
+
 (provide 'my-appearance)
 
 ;;; my-appearance.el ends here
