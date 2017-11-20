@@ -31,6 +31,9 @@
 
 ;; Define font face and size
 (add-to-list 'default-frame-alist '(font . "Fira Code-14"))
+(add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
+(add-to-list 'default-frame-alist '(ns-appearance . dark))
+
 (custom-set-faces
  '(buffer-menu-buffer ((t (:weight normal))))
  '(ido-first-match ((t (:weight normal)))))
