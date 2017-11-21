@@ -1,6 +1,6 @@
 #+TITLE: My Emacs configuration
 
-This is my .emacs.d directory, settings are mostly stolen from all over the internets and adapted for my taste and needs. Feel free to do the same or just lookup and borrow the parts you're after. If you learned something here, my goal is achieved.
+This is my personal =~/.emacs.d= directory, settings are mostly stolen from all over the internets and adapted for my taste and needs. Feel free to do the same or just lookup and borrow the parts you're after. If you learned something here, my goal is reached.
 
 After watching [[http://cestlaz.github.io/stories/emacs/][Mike Zamansky's webcasts]] I have decided to declare .emacs.d bancruptcy and start again.
 
@@ -9,10 +9,12 @@ After watching [[http://cestlaz.github.io/stories/emacs/][Mike Zamansky's webcas
 
 While I'm certain most things will work on any modern Emacs, personally I am currently using GNU Emacs 24.5.1 on macOS, and, therefore, can only guarantee the configuration to work correctly on a comparable setup.
 
-On macOS you can install Emacs using Homebrew:
+On macOS you can install Emacs using Homebrew, I recommend =emacs-plus=:
 
 #+BEGIN_SRC shell
-brew install emacs --with-cocoa
+brew tap d12frosted/emacs-plus
+brew install emacs-plus --without-spacemacs-icon --HEAD
+brew linkapps emacs-plus
 #+END_SRC
 
 Before installing this configuration ensure you don't have =~/.emacs.d= directory. If you do, then either move it or dispose of it before proceeding further.
@@ -27,7 +29,7 @@ You'll also need the [[https://github.com/tonsky/FiraCode][Fira Code]] font, so 
 
 #+BEGIN_SRC shell
 brew tap caskroom/fonts
-brew cask info font-fira-code
+brew cask install font-fira-code
 #+END_SRC
 
 
