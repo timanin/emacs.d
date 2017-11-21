@@ -30,7 +30,8 @@
   (load-theme 'base16-eighties t))
 
 ;; Define font face and size
-(add-to-list 'default-frame-alist '(font . "Fira Code-14"))
+;; (add-to-list 'default-frame-alist '(font . "FuraCode Nerd Font-14"))
+;; Enable the title bar matching colour (requires building from HEAD)
 (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t))
 (add-to-list 'default-frame-alist '(ns-appearance . dark))
 

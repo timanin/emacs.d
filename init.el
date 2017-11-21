@@ -57,6 +57,7 @@
 (require 'my-diff)
 (require 'my-editing)
 (require 'my-flex)
+(require 'my-font)
 (require 'my-general)
 (require 'my-server)
 (require 'my-help)
