@@ -37,36 +37,40 @@ brew cask install font-fira-code
 
 List of features:
 
-- [ ] use-package
-- [ ] macOS support
-- [ ] fast start
-- [ ] company completion
+- [ ] Styled to work great on macOS.
+- [ ] Organised with the [[https://github.com/jwiegley/use-package][use-package]] macro.
+- [ ] [[http://orgmode.org][Org-mode]] improvements ([[https://mobileorg.github.io][MobileOrg]]?).
+- [ ] Deferred module loading for fast startup.
+- [ ] Intended to be run constantly in server mode.
+- [ ] Code completion with [[http://company-mode.github.io][company-mode]].
 - [ ] ligatures support (Fira Code)
 - [ ] base16-theme
 - [ ] smart modeline
 - [ ] all-the-icons
-- [ ] magit
-- [ ] flycheck
+- [ ] [[https://magit.vc][Magit]] with =C-x g=
+- [ ] Syntax checking with [[http://www.flycheck.org/][flycheck]].
 - [ ] which-key
 - [ ] projectile
-- [ ] yasnippet
+- [ ] Snippets with [[http://joaotavora.github.io/yasnippet/][yasnippet]].
 - [ ] persistent scratch
 - [ ] window switching using ace-window
 - [ ] ibuffer
+- [ ] expand-region with =C-==
 
 Supported languages/frameworks:
 
 - [ ] Ansible
+- [ ] Elisp
 - [ ] Fish
 - [ ] Groovy
-- [ ] Terraform
 - [ ] Haskell
 - [ ] JSON
 - [ ] Markdown
-- [ ] Org
 - [ ] Python
+- [ ] Terraform
 - [ ] Web
 - [ ] YAML
+
 
 * Licence
 
