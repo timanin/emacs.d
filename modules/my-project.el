@@ -24,10 +24,6 @@
   (projectile-mode)
   :diminish projectile-mode)
 
-(use-package perspeen
-  :config
-  (perspeen-mode))
-
 (provide 'my-project)
 
 ;;; my-project.el ends here
