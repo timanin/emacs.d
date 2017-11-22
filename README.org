@@ -38,7 +38,7 @@ brew cask install font-fira-code
 List of features:
 
 - [ ] Styled to work great on macOS.
-- [ ] Organised with the [[https://github.com/jwiegley/use-package][use-package]] macro.
+- [ ] Modular design thanks to the [[https://github.com/jwiegley/use-package][use-package]] macro.
 - [ ] [[http://orgmode.org][Org-mode]] improvements ([[https://mobileorg.github.io][MobileOrg]]?).
 - [ ] Deferred module loading for fast startup.
 - [ ] Intended to be run constantly in server mode.
