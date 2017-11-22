@@ -35,8 +35,38 @@ brew cask install font-fira-code
 
 * Usage
 
-List of features pending.
+List of features:
 
+- [ ] use-package
+- [ ] macOS support
+- [ ] fast start
+- [ ] company completion
+- [ ] ligatures support (Fira Code)
+- [ ] base16-theme
+- [ ] smart modeline
+- [ ] all-the-icons
+- [ ] magit
+- [ ] flycheck
+- [ ] which-key
+- [ ] projectile
+- [ ] yasnippet
+- [ ] persistent scratch
+- [ ] window switching using ace-window
+- [ ] ibuffer
+
+Supported languages/frameworks:
+
+- [ ] Ansible
+- [ ] Fish
+- [ ] Groovy
+- [ ] Terraform
+- [ ] Haskell
+- [ ] JSON
+- [ ] Markdown
+- [ ] Org
+- [ ] Python
+- [ ] Web
+- [ ] YAML
 
 * Licence
 
