@@ -19,16 +19,15 @@
 ;;; Code:
 
 (use-package projectile
-  :demand t 
+  :demand t
   :config
-  (projectile-global-mode)
+  (projectile-mode)
   :diminish projectile-mode)
 
-(use-package persp-projectile
+(use-package perspeen
   :config
-  (persp-mode))
+  (perspeen-mode))
 
 (provide 'my-project)
 
 ;;; my-project.el ends here
-
