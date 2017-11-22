@@ -72,6 +72,12 @@
   :bind
   ("C-=" . er/expand-region))
 
+;; quickly go to a char
+(use-package iy-go-to-char
+  :config
+  (global-set-key (kbd "M-m") 'iy-go-to-char)
+  (global-set-key (kbd "M-M") 'iy-go-to-char-backward))
+
 ;; Bind C-w to delete previous word
 (defun kill-region-or-backward-kill-word (&optional arg region)
   "`kill-region' if the region is active, otherwise `backward-kill-word'.
