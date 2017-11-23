@@ -19,27 +19,27 @@
 ;;; Code:
 
 (use-package magit
+  :bind
+  (("C-x g" . magit-status)
+  :map magit-status-mode-map
+  ("q" . magit-quit-session))
   :config
   (setq vc-handled-backends (delq 'Git vc-handled-backends))
-  :bind
-  ("C-x g" . magit-status))
 
-;; full screen magit-status
-;; from http://whattheemacsd.com/setup-magit.el-01.html
+  ;; full screen magit-status
+  ;; from http://whattheemacsd.com/setup-magit.el-01.html
 
-(defadvice magit-status (around magit-fullscreen activate)
-  "Open magit status as a fullscreen buffer."
-  (window-configuration-to-register :magit-fullscreen)
-  ad-do-it
-  (delete-other-windows))
+  (defadvice magit-status (around magit-fullscreen activate)
+    "Open magit status as a fullscreen buffer."
+    (window-configuration-to-register :magit-fullscreen)
+    ad-do-it
+    (delete-other-windows))
 
-(defun magit-quit-session ()
-  "Restore the previous window configuration and kill the magit buffer."
-  (interactive)
-  (kill-buffer)
-  (jump-to-register :magit-fullscreen))
-
-(define-key magit-status-mode-map (kbd "q") 'magit-quit-session)
+  (defun magit-quit-session ()
+    "Restore the previous window configuration and kill the magit buffer."
+    (interactive)
+    (kill-buffer)
+    (jump-to-register :magit-fullscreen)))
 
 (provide 'my-git)
 
