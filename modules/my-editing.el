@@ -134,6 +134,41 @@ there's a region, all lines that region covers will be duplicated."
 ;; Disable the warning when using buffer narrowing
 (put 'narrow-to-region 'disabled nil)
 
+;; C-x C-r to rename the file opened in the current buffer
+;; from http://whattheemacsd.com/file-defuns.el-01.html
+(defun rename-current-buffer-file ()
+  "Rename current buffer and the file it is visiting."
+  (interactive)
+  (let ((name (buffer-name))
+        (filename (buffer-file-name)))
+    (if (not (and filename (file-exists-p filename)))
+        (error "Buffer '%s' is not visiting a file!" name)
+      (let ((new-name (read-file-name "New name: " filename)))
+        (if (get-buffer new-name)
+            (error "A buffer named '%s' already exists!" new-name)
+          (rename-file filename new-name 1)
+          (rename-buffer new-name)
+          (set-visited-file-name new-name)
+          (set-buffer-modified-p nil)
+          (message "File '%s' successfully renamed to '%s'"
+                   name (file-name-nondirectory new-name)))))))
+(global-set-key (kbd "C-x C-r") 'rename-current-buffer-file)
+
+;; C-x C-k to delete the file opened in the current buffer
+;; from http://whattheemacsd.com/file-defuns.el-02.html
+(defun delete-current-buffer-file ()
+  "Remove file connected to current buffer and kill the buffer."
+  (interactive)
+  (let ((filename (buffer-file-name))
+        (buffer (current-buffer)))
+    (if (not (and filename (file-exists-p filename)))
+        (ido-kill-buffer)
+      (when (yes-or-no-p "Are you sure you want to remove this file? ")
+        (delete-file filename)
+        (kill-buffer buffer)
+        (message "File '%s' successfully removed" filename)))))
+(global-set-key (kbd "C-x C-k") 'delete-current-buffer-file)
+
 (provide 'my-editing)
 
 ;;; my-editing.el ends here
