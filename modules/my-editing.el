@@ -19,9 +19,8 @@
 ;;; Code:
 
 ;; Ensure UTF-8 is always used
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
 
 ;; Use 4 spaces instead of tabs
 (setq-default indent-tabs-mode nil)
