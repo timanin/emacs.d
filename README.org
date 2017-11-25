@@ -25,15 +25,17 @@ To download this configuration as you new =~/.emacs.d=:
 git clone https://github.com/timanin/emacs.d.git ~/.emacs.d
 #+END_SRC
 
-You'll also need the [[https://github.com/tonsky/FiraCode][Fira Code]] font, so either get it from their github page or install using Homebrew:
+You'll also need the [[https://be5invis.github.io/Iosevka/][Iosevka]] font, so either get it from their github page, install using Homebrew or build from the source code:
 
 #+BEGIN_SRC shell
 brew tap caskroom/fonts
-brew cask install font-fira-code
+brew cask install iosevka
 #+END_SRC
 
 
 * Usage
+
+I'm currently rewriting the config while also trying to improve my elisp, so this is WIP.
 
 List of features:
 
@@ -45,10 +47,10 @@ List of features:
 - [ ] Code completion with [[http://company-mode.github.io][company-mode]].
 - [ ] [[https://github.com/magnars/multiple-cursors.el][Multiple cursors]].
 - [ ] REST client with [[https://github.com/pashky/restclient.el][restclient.el]].
-- [ ] Ligatures support (with Fira Code).
+- [ ] Ligatures support (with Iosevka).
 - [ ] Smooth theming with [[https://github.com/belak/base16-emacs][base16-theme]] and [[https://github.com/domtronn/all-the-icons.el][All The Icons]].
 - [ ] Smart modeline.
-- [ ] [[https://magit.vc][Magit]] with =C-x g=
+- [X] [[https://magit.vc][Magit]] with =C-x g=
 - [ ] Syntax checking with [[Http://www.flycheck.org/][Flycheck]].
 - [ ] Key bindings learning mode with [[https://github.com/justbur/emacs-which-key][which-key]].
 - [ ] Project support with [[http://projectile.readthedocs.io/][Projectile]].
