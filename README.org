@@ -7,7 +7,7 @@ After watching [[http://cestlaz.github.io/stories/emacs/][Mike Zamansky's webcas
 
 * Installation
 
-While I'm certain most things will work on any modern Emacs, personally I am currently using GNU Emacs 24.5.1 on macOS, and, therefore, can only guarantee the configuration to work correctly on a comparable setup.
+While I'm certain most things will work on any modern Emacs, personally I am using GNU Emacs HEAD build (currently 27.0.50) on macOS, and, therefore, can only guarantee the configuration to work correctly on a comparable setup.
 
 On macOS you can install Emacs using Homebrew, I recommend =emacs-plus=:
 
