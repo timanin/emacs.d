@@ -46,6 +46,10 @@
 ;; Disable toolbar
 (tool-bar-mode -1)
 
+;; Disable menubar in the terminal
+(unless (display-graphic-p)
+  (menu-bar-mode -1))
+
 ;; Remove games menu
 (define-key menu-bar-tools-menu [games] nil)
 
