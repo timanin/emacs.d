@@ -1,8 +1,8 @@
 #+TITLE: My Emacs configuration
 
-This is my personal =~/.emacs.d= directory, settings are mostly stolen from all over the internets and adapted for my taste and needs. Feel free to do the same or just lookup and borrow the parts you're after. If you learned something here, my goal is reached.
+This is my personal =~/.emacs.d= directory, settings are mostly stolen from all over the Internets and adapted for my taste and needs. Feel free to do the same or just lookup and borrow the parts you're after. If you learned something here, my goal is reached.
 
-After watching [[http://cestlaz.github.io/stories/emacs/][Mike Zamansky's webcasts]] I have decided to declare .emacs.d bancruptcy and start again.
+After watching [[http://cestlaz.github.io/stories/emacs/][Mike Zamansky's webcasts]] I have decided to declare Emacs config bankruptcy and start again.
 
 
 * Installation
@@ -25,7 +25,7 @@ To download this configuration as you new =~/.emacs.d=:
 git clone https://github.com/timanin/emacs.d.git ~/.emacs.d
 #+END_SRC
 
-You'll also need the [[https://be5invis.github.io/Iosevka/][Iosevka]] font, so either get it from their github page, install using Homebrew or build from the source code:
+You'll also need the [[https://be5invis.github.io/Iosevka/][Iosevka]] font, so either get it from their GitHub page, install using Homebrew or build from the source code:
 
 #+BEGIN_SRC shell
 brew tap caskroom/fonts
@@ -35,7 +35,7 @@ brew cask install iosevka
 
 * Usage
 
-I'm currently rewriting the config while also trying to improve my elisp, so this is WIP.
+I'm currently rewriting the config while also trying to improve my Emacs Lisp, so this is WIP.
 
 List of features:
 
@@ -49,7 +49,7 @@ List of features:
 - [ ] REST client with [[https://github.com/pashky/restclient.el][restclient.el]].
 - [ ] Ligatures support (with Iosevka).
 - [ ] Smooth theming with [[https://github.com/belak/base16-emacs][base16-theme]] and [[https://github.com/domtronn/all-the-icons.el][All The Icons]].
-- [ ] Smart modeline.
+- [ ] Smart mode line.
 - [X] [[https://magit.vc][Magit]] with =C-x g=
 - [ ] Syntax checking with [[Http://www.flycheck.org/][Flycheck]].
 - [ ] Key bindings learning mode with [[https://github.com/justbur/emacs-which-key][which-key]].
@@ -62,7 +62,7 @@ List of features:
 Supported languages/frameworks:
 
 - [ ] Ansible
-- [ ] Elisp
+- [ ] Emacs Lisp
 - [ ] Fish
 - [ ] Groovy
 - [ ] Haskell
