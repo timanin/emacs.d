@@ -18,6 +18,8 @@
 
 ;;; Code:
 
+;; Define font face and size
+(add-to-list 'default-frame-alist '(font . "Iosevka-15"))
 (when (window-system)
   (set-frame-font "Iosevka-15"))
 
