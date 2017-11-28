@@ -133,6 +133,10 @@ there's a region, all lines that region covers will be duplicated."
 ;; Disable the warning when using buffer narrowing
 (put 'narrow-to-region 'disabled nil)
 
+;; Similarly, allow to upcase and donwcase a region
+(put 'downcase-region 'disabled nil)
+(put 'upcase-region 'disabled nil)
+
 ;; C-x C-r to rename the file opened in the current buffer
 ;; from http://whattheemacsd.com/file-defuns.el-01.html
 (defun rename-current-buffer-file ()
