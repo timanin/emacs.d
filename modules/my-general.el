@@ -18,6 +18,9 @@
 
 ;;; Code:
 
+;; Only use the echo area
+(setq use-dialog-box nil)
+
 ;; Ask y/n instead of yes/no
 (defalias 'yes-or-no-p 'y-or-n-p)
 
