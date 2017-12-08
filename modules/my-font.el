@@ -20,8 +20,7 @@
 
 ;; Define font face and size
 (add-to-list 'default-frame-alist '(font . "Iosevka-15"))
-(when (window-system)
-  (set-frame-font "Iosevka-15"))
+(set-fontset-font t 'symbol "Apple Color Emoji-13" nil 'prepend)
 
 ;; Enable ligatures, from:
 ;; https://gist.github.com/mrkgnao/49c7480e1df42405a36b7ab09fe87f3d#file-setup-ligatures-el
