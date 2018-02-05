@@ -18,13 +18,12 @@
 
 ;;; Code:
 
-;; Start Emacs server & Edit server after init
-(use-package edit-server
+(use-package atomic-chrome
   :init
-  (add-hook 'after-init-hook 'server-start t)
-  (add-hook 'after-init-hook 'edit-server-start t)
+  (atomic-chrome-start-server)
   :config
-  (setq edit-server-new-frame nil))
+  (setq atomic-chrome-buffer-open-style 'full)
+  (setq atomic-chrome-default-major-mode 'org-mode))
 
 (provide 'my-server)
 
