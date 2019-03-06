@@ -172,8 +172,11 @@ there's a region, all lines that region covers will be duplicated."
         (message "File '%s' successfully removed" filename)))))
 (global-set-key (kbd "C-x C-k") 'delete-current-buffer-file)
 
+;; editorconfig support
+(use-package editorconfig
+  :config
+  (editorconfig-mode 1))
+
 (provide 'my-editing)
 
 ;;; my-editing.el ends here
-
-
