@@ -25,6 +25,8 @@
   (setq atomic-chrome-buffer-open-style 'full)
   (setq atomic-chrome-default-major-mode 'org-mode))
 
+(add-hook 'after-init-hook 'server-start t)
+
 (provide 'my-server)
 
 ;;; my-server.el ends here
