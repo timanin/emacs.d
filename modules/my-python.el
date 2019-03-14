@@ -34,6 +34,12 @@
   :defer t
   :after anaconda-mode)
 
+(use-package blacken
+  :defer t
+  :after anaconda-mode
+  :config
+  (add-hook 'python-mode-hook 'blacken-mode))
+
 (provide 'my-python)
 
 ;;; my-python.el ends here
