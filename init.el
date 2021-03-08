@@ -72,7 +72,6 @@
 (require 'my-markdown)
 (require 'my-org)
 (require 'my-yaml)
-(require 'my-toml)
 
 (require 'my-ansible)
 (require 'my-elisp)
